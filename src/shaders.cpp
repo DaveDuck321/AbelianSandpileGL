@@ -68,6 +68,7 @@ GLuint CreateComputeProgram(int localSize) {
     
     GLuint compute_shader = compileShader(GL_COMPUTE_SHADER, formattedShader);
 
+    delete formattedShader;
     //0 used as dummy value
     return linkProgram(compute_shader, 0);
 }
